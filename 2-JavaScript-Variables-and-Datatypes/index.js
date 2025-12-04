@@ -1,3 +1,6 @@
+//  https://www.notion.so/Lecture-02-Data-Type-2773a78e0e228042ba55df0265e78c6b
+
+
 // variable ko kaise banate hai
 
 // let name = "Rohit";
