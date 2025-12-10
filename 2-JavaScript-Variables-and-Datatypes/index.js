@@ -158,3 +158,23 @@ let obj2 = obj; // pass by reference
 obj2.name = "Rohan";
 
 console.log(obj);
+
+
+/*
+
+The reason for the mistake
+In the original JavaScript implementation, values were stored in 32-bit units, which included a small type tag to identify the data type. 
+The type tag for objects was 000 (binary).
+The value for null was represented internally as the NULL pointer (which is 0x00 or all zeros in most platforms). 
+Because null's internal representation had a type tag of 000, the typeof operator interpreted it as an object, resulting in the "object" return value you see today. 
+Why it hasn't been fixed
+The behavior of typeof null is a legacy issue that has not been corrected because of backward compatibility. Changing it now would likely break countless existing websites, libraries, and applications that rely on this established (albeit incorrect) behavior. The ECMAScript specification even acknowledges it as a "longstanding bug" that is preserved for compatibility reasons. 
+How to correctly check for null
+Because typeof null is unreliable for checking the null type specifically, you should use the strict equality operator (===): 
+javascript
+if (value === null) {
+  // code to handle null value
+}
+This is the standard and correct way to check if a value is exactly null in modern JavaScript. 
+
+*/
