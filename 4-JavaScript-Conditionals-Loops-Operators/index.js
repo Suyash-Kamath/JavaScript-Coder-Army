@@ -1,5 +1,5 @@
 //  https://www.notion.so/Lecture-04-27b3a78e0e228099a515cf3dd04dd9ac
-
+// https://gemini.google.com/app/b9523937772a8846
 // Operator
 // Arithmetic 
 
