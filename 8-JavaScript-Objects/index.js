@@ -1,5 +1,6 @@
 // notion.so/Lecture-08-Objects-in-Javascript-2833a78e0e2280109358ee39b2b35e4f?source=copy_link
-
+// https://grok.com/share/c2hhcmQtNQ_4de81d3c-9d02-4b8e-9400-e3e99746a0a9 
+// https://chatgpt.com/share/693a63cc-8be4-8012-be13-aa1baf7f2ca5
 // object
 // key value
 // const user = {
