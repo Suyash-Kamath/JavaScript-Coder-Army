@@ -37,14 +37,12 @@ const parent = document.getElementById("parent");
 
 function handleClick(e){
    e.target.textContent = "I am Clicked";
-   parent.removeEventListener('click',handleClick);
+   parent.removeEventListener('click',handleClick); // andhar rakha so that atleast ek baar toh chal jaaye mere aaka 
 }
 
 parent.addEventListener('click',handleClick)
 
-
-
-
+// do this to remove event listener 
 
 // for(let child of parent.children){
 //     console.log(child);
@@ -57,7 +55,8 @@ parent.addEventListener('click',handleClick)
 
 // const grandparent = document.getElementById("grandparent");
 // grandparent.addEventListener('click',(e)=>{
-//     console.log(e.target);
+//     console.log(e.target); // it tells ki  exactly konse waale element ko click kiya hai , konse waale element mere andhar tha jisne trigger kia hai event
+// e.target usko,means uss element ko  point out karta hai jisne ise trigger kiya tha , benefit from e.target is aapko ek hi jaaga event listener lagana padaa.....outer div pe event listener laga sakta huu and pata kar sakta hu kis inner div ne click kiya hai , e.target points to that single element
 //     // console.log("GrandParent is clicked");
 // })
 
@@ -70,11 +69,19 @@ parent.addEventListener('click',handleClick)
 // const child = document.getElementById("child");
 // child.addEventListener('click',(e)=>{
 //     // console.log(e);
-//     // e.stopPropagation();
+//     // e.stopPropagation(); // Prevents Bubbling, means Bubbling math karnaaa
 //     // console.log("child is clicked");
 // })
 // addEventListener ka third argument is by default false, true kardoge toh ulte order pe chala jaayega 
 
+// third argument which is true/false meaning is 
 // capture phase on hai: Top se down aaoge: Us time pe event ko trigger kar diya jaayega
 // capture phase off hai: Event hai usko down to up(Bubbling phase bolte hai, tab trigger kiya jaayega)
 
+// sometimes people say as we attached eventlistener , but please remove it too
+
+// you cannot do this parent.removeEventListener , even though the callback function apears same but they have got different memory , so alag alag consider kardegaa naa 
+
+// Mene event handler nahi lagaya hai , me koi listen nahi kar raha hu event ? 
+// dekho events hotey rehte hai but agar koi sunne waala ho toh hi mazaa aayega and action perform hoga 
+// agar children  me event daala hai toh wo window Object tak bubble hoga but unke upar hai sunna ya nahi sunna 
