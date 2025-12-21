@@ -1,0 +1,26 @@
+.circle{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    animation: grow 5s forwards;
+    position: absolute;
+}
+/* what position:absolute tells you is normal flow se hatata hai and says top se idhar aao , vagera vagera 
+
+and we wrote display and justify and align-items becuase when we write Hi , we want to make it to the center*/
+@keyframes grow {
+    0%{
+       transform: scale(1);
+       opacity: 1;
+       font-size: 10px;
+    }
+    100%{
+       transform: scale(3);
+       opacity: 0;
+       font-size: 40px;
+    }
+}
