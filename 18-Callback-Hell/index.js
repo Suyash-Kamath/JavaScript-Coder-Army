@@ -1,5 +1,4 @@
-// https://www.notion.so/Lecture-17-Event-Loop-in-JS-2943a78e0e22801582e6c6f4a83ecd9f
-
+// https://www.notion.so/Lecture-18-Callback-Hell-2953a78e0e228000a2e8cba5544e79db
 // zomato application
 
 const orderDetail = {
